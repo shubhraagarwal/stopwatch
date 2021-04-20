@@ -1,21 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
+import styled from "styled-components/native";
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {View } from 'react-native';
+import Header from './components/header';
+import Timer from './components/timer';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Styles>
+      <View>
+        <Header />
+        <Timer />
+      </View>
+    </Styles>
   );
-}
+} 
+const Styles = styled.View`
+background-color : black;
+`;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
